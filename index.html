@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Games Showcase Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Online Games Showcase</h1>
+    </header>
+
+    <nav>
+        <a href="../index.html">&#8962;Home</a>
+        <a href="../pages/Tetris.html">&#127918;Tetris</a>
+        <a href="../pages/Minecraft.html"><img src="../images/minecraft-favi.avif" alt="Minecraft" style="height: 12px; width: 12px;">Minecraft</a>
+        <a href="../pages/among-us.html"><img src="../images/among-us-fav.png" alt="Among us" style="height: 12px; width: 12px;">Among-Us</a>
+        <a href="../pages/Temple-Run.html"><img src="../images/temple-run-fav.jpg" alt="Temple-run" style="height: 12px; width: 12px;">Temple-Run</a>
+        <a href="../pages/contents.html">&#128196;Contents</a>
+        <a href="../pages/bibliography.html">&#128214;Bibliography</a>
+        <a href="../pages/about.html">&#8712;About</a>
+    </nav>
+    
+    <section>
+        <h2>Welcome to the Online Games Showcase!</h2>
+        <p>Explore our collection of non-violent online games.</p>
+        <div class="dropdown">
+            <label for="searchCategory">Select Game:</label>
+            <select id="searchCategory">
+                <option value="tetris">Tetris</option>
+                <option value="minecraft">Minecraft</option>
+                <option value="among-us">Among-Us</option>
+                <option value="temple-run">Temple-Run</option>
+            </select>
+        </div>
+        <button onclick="search()">Search</button>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Online Games Showcase. All rights reserved.</p>
+    </footer>
+
+</body>
+<script>
+    function search() {
+        var selectedCategory = document.getElementById("searchCategory").value;
+
+        // Add your logic to redirect based on the selected category
+        switch (selectedCategory) {
+            case "tetris":
+                // Redirect to the "all" page
+                window.location.href = "pages/Tetris.html";
+                break;
+            case "minecraft":
+                // Redirect to the "games" page
+                window.location.href = "pages/Minecraft.html";
+                break;
+            case "among-us":
+                // Redirect to the "movies" page
+                window.location.href = "pages/among-us.html";
+                break;
+            case "temple-run":
+                // Redirect to the "books" page
+                window.location.href = "pages/Temple-Run.html";
+                break;
+            default:
+                // Handle other cases or provide a default redirect
+                alert("Invalid category");
+        }
+    }
+</script>
+</html>
